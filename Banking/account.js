@@ -51,14 +51,16 @@ var Account = function (amount) {
 //step 1: Configuration/initialization
 //Register Eventhandlers with event using emitter object
 
-emitter.on("underBalance",handlers.bloackAccount);
-emitter.on("overBalance",handlers.payIncomeTax);
+emitter.on("underBalance",handlers.blockAccount);
+emitter.on("underBalance",handlers.sendEmail);
+emitter.on("underBalance",handlers.payIncomeTax);
+emitter.on("underBalance",handlers.sendSMS);
+
 
 //step 2: create  objects
 var acct123 = new Account(55000);              //creating a instance
+//var acct124=new Account(55000);
+//start invoking the 
+acct123.debit(52000);
 var data = acct123.receiveBalance();           //invoking member function
-console.log("balance=" + data);
-var amount = 200000;
-acct123.credit(amount);
-data = acct123.receiveBalance();
 console.log("Balance=" + data);
