@@ -1,29 +1,58 @@
-//set of functions 
-//is a javascript loibrary consist of resuable functions
-//nodejs is used for writting server side
-function show(){
-    var count =67;
-    count++;
-    console.log(count);
-    };
+//is indirect call
+//callback function
+// event handler
+//Listener
+//callback function 1
 
-function display(company){
-    console.log("Company name= "+company);
-    };
+//nonblocking function
+function processJob1(){
+    console.log("Processing request by handler 1");
+    console.log("Performing task");
+    console.log("Generating response");
+    console.log("Sending response");
+};
 
-function addition(num1,num2){
-    var result=num1+num2;
-    return result;
-    };
+//callback function 2
 
-    show(); //invoking a javascript function
-    var provider="Transfloer Learning Pvt. Ltd.";
-    var hostName="Seed Infotech Ltd.";
-    display(provider);
+//nonblocking function
+function processJob2(){
+    console.log("Processing request by handler 2");
+    console.log("Performing task 2");
+    console.log("Generating response 2");
+    console.log("Sending response 2");
+};
 
-    var number1=898;
-    var number2=764;
-    //var total=addition(1,2);
-    var total=addition(number1,number2);
+//callback function 3
 
-    console.log("Final Output: "+total);
+//nonblocking function
+function processJob3(){
+    console.log("Processing request by handler 3");
+    console.log("Performing task 3");
+    console.log("Generating response 3");
+    console.log("Sending response 3");
+};
+//instead of invoking a function
+//is a indirect call
+//requestProcess();
+
+// use a inbuild function
+//register callback function as first parameter
+//set time interval for automatic function call
+
+//set interval is a direct call
+//but a processRequest is indirect call
+
+//function mapping after certain interval
+
+//scheduling tasks to be executed repeadly after certain time
+//interval
+
+//set background work execution after certain time  interval
+// is thisa kind of multitasking
+setInterval(processJob1,5000);
+setInterval(processJob2,1000);
+setInterval(processJob3,10000);
+
+
+//multitasking is happing in a asyanchronous way
+console.log("stop the execution....");
