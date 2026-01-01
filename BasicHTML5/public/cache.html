@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage HTML5</title>
+</head>
+<body>
+    <h1>Transflower registration</h1>
+    <input type="text" id="txt" value="">
+    <br><br>
+    <input type="password" id="pass">
+    <br>
+    <br>
+    <button id="btn" onclick="onSetData()">Login</button>
+    <br><br>
+    <p id="para" value="msg will be displayed here"></p>
+    
+    <script>
+        var name=document.getElementById("txt");
+        var pass=document.getElementById("pass");
+        var button=document.getElementById("btn");
+        var para=document.getElementById("para");
+
+
+        function onSetData(){
+            if(typeof(storage)!=="undefined"){
+                var username=name.value;
+                var passsword=pass.value;
+
+                var strValid=localStorage.getItem("validUser")
+                var validUser=JSON.parse(strValid);
+
+                if(validUser.username==username&&validUser.passsword==passsword){
+                    para.innerHTML="Successfully loged in";
+                }
+                else{
+                    para.innerHTML="Invalid User/Information";
+                }
+            }
+            else{
+                para.innerHTML="Sorry...! user browser doesn't support HTML5 features";
+            }
+        }
+    </script>
+</body>
+</html>
