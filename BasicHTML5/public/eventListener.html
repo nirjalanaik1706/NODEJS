@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+</head>
+<body>
+    <button id="btn" >Button</button>
+    <p id="para"></p>
+
+    <script>
+        var btn=document.getElementById("btn");
+        var para=document.getElementById("para");
+
+        btn.addEventListener("mouseover",over);
+        btn.addEventListener("mouseout",out);
+        btn.addEventListener("mousedown",down);
+        btn.addEventListener("mouseup",up);
+        btn.addEventListener("mouseenter",enter);
+        btn.addEventListener("mouseleave",leave);
+
+        function over(){
+            para.innerHTML="Mouse over";
+        }
+
+        function out(){
+            para.innerHTML="Mouse Out";
+        }
+
+        function down(){
+            para.innerHTML="Mouse Down";
+        }
+
+        function up(){
+            para.innerHTML="Mouse Up";
+        }
+
+        function enter(){
+            para.innerHTML="Mouse Enter";
+        }
+
+        function leave(){
+            para.innerHTML="Mouse Leave";
+        }
+
+    </script>
+
+</body>
+</html>
