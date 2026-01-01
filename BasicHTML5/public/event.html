@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn" onclick="onPress()">Press Me</button>
+    <button id="reverseBtn" onclick="toReverse()">Undo</button>
+    <div id="div">Press button for changing me...!!!</div>
+<script>
+    var div=document.getElementById("div");
+    function onPress(){
+        div.innerHTML="Button is pressed";
+    }
+    function toReverse(){
+        div.innerHTML="Press button for changning me!!";
+    }
+</script>
+</body>
+</html>
