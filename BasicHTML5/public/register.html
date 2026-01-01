@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<h1>Transflower</h1>
+<input type="text" id="txt" value=""><br><br>
+<input type="passsword" id="pass"><br><br>
+<button id="btn" onclick="onRegister()">Register</button><br><br>
+<div id="div" value="Message will be displayed here"></div><br><br>
+
+<script>
+    var txtbox=document.getElementById("txt");
+    var btn=document.getElementById("btn");
+    var div=document.getElementById("div");
+    var pass=document.getElementById("pass");
+
+    function onRegister(){
+        if(typeof(Storage)!=="undefined"){
+            var name=txtbox.value;
+            var passsword=pass.value;
+            var validUser={
+                "username":name,
+                "password":passsword
+            }
+            localStorage.setItem("validUser",JSON.stringify(validUser));
+            div.innerHTML="Successgully registered";
+        }
+        else{
+            div.innerHTML="sorry....!your brower doesn't support HTML5 elements";
+        }
+    }
+</script>
+<body>
+    
+</body>
+</html>
