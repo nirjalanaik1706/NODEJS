@@ -8,6 +8,7 @@
 <body>
     <button id="btn" onclick="onPress()">Press Me</button>
     <button id="reverseBtn" onclick="toReverse()">Undo</button>
+    <button id="date" onclick="displayDate()">Show date</button>
     <div id="div">Press button for changing me...!!!</div>
 <script>
     var div=document.getElementById("div");
@@ -16,6 +17,10 @@
     }
     function toReverse(){
         div.innerHTML="Press button for changning me!!";
+    }
+    function displayDate(){
+       // document.getElementById("date").innerHTML=Date();
+        div.innerHTML=Date();
     }
 </script>
 </body>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" width="300" height="300" style="background-color:rgba(204, 0, 255, 0.518)"></canvas>
+    <h1 style="color: brown;">Transflower Paint Brush</h1>
+    <p style="color:darkolivegreen; font-size: medium; font: italic">Doing Ordinary Things Extraordinary</p>
+    
+    <script>
+       function drawLine(){
+        //DOM
+        var theCanvas=document.getElementById("canvas");
+        var context=theCanvas.getContext("2d");
+        context.moveTo(10,10);
+        context.lineTo(100,200)
+        context.stroke();
+       }
+
+       function drawRectangle(){
+         var theCanvas=document.getElementById("canvas");
+        var context=theCanvas.getContext("2d");
+        context.fillStyle="";
+        context.fillRect(50,50,200,150);
+
+       }
+
+       function drawTriangle(){
+        var canvas=document.getElementById('canvas');
+        if(canvas.getContext){
+            var ctx=canvas.getContext('2d');
+            ctx.beginPath();
+            ctx.moveTo(75,50);
+            ctx.lineTo(100,75);
+            ctx.lineTo(100,25);
+            ctx.fill();
+        }
+       }
+    //    drawRectangle();
+    //    drawLine();
+       drawTriangle();
+    </script>
+</body>
+</html>

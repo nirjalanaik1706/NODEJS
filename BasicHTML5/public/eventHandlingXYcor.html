@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+</head>
+<body><br>
+    <br>
+    <button id="btn" >                   Button</button>
+    <p id="para"></p>
+
+    <script>
+        var btn=document.getElementById("btn");
+        var para=document.getElementById("para");
+
+        btn.addEventListener("mouseover",onMouseOver);
+        btn.addEventListener("mouseout",onMouseOut);
+        btn.addEventListener("mousedown",onMouseDown);
+        btn.addEventListener("mouseup",onMouseUp);
+        btn.addEventListener("mouseenter",onMouseEnter);
+        btn.addEventListener("mouseleave",onMouseLeave);
+
+        function onMouseOver(event){
+            var x=event.clientX;
+            var y=event.clientY;
+            var coords="X coords: "+x+", Y coords: "+y;
+            para.innerHTML="Mouse over"+coords;
+        }
+
+        function onMouseOut(){
+             var x=event.clientX;
+            var y=event.clientY;
+            var coords="X coords: "+x+", Y coords: "+y;
+            para.innerHTML="Mouse Out"+coords;
+        }
+
+        function onMouseDown(){
+             var x=event.clientX;
+            var y=event.clientY;
+            var coords="X coords: "+x+", Y coords: "+y;
+            para.innerHTML="Mouse Down"+coords;
+        }
+
+        function onMouseUp(){
+             var x=event.clientX;
+            var y=event.clientY;
+            var coords="X coords: "+x+", Y coords: "+y;
+            para.innerHTML="Mouse Up"+coords;
+        }
+
+        function onMouseEnter(){
+             var x=event.clientX;
+            var y=event.clientY;
+            var coords="X coords: "+x+", Y coords: "+y;
+            para.innerHTML="Mouse Enter"+coords;
+        }
+
+        function onMouseLeave(){
+             var x=event.clientX;
+            var y=event.clientY;
+            var coords= x + "," + y;
+            para.innerHTML=coords;
+        }
+
+    </script>
+
+</body>
+</html>
