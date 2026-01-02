@@ -1,0 +1,17 @@
+{
+  "name": "crud_using-ajax",
+  "version": "1.0.0",
+  "description": "CRUD Oprations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nirjala naik",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "mongoose": "^9.1.1",
+    "mysql": "^2.18.1",
+    "path": "^0.12.7"
+  }
+}
