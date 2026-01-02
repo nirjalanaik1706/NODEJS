@@ -3,9 +3,8 @@ var cors = require('cors');
 const bodyParser = require('body-parser');
 var path = require('path');
 var mysql = require('mysql2');
-const { request } = require('http');
 
-app = express();
+const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
@@ -31,8 +30,9 @@ connection.connect(function (err) {
     }
 });
 
-app.get((request, response) => {
-    response.sendFile("index.html");
+
+app.get('/',(request, response) => {
+    response.sendFile(path.join(__dirname,'public',"index.html"));
 });
 
 //Create
@@ -48,23 +48,23 @@ app.post('/users', (request, response) => {
 });
 
 //delete
-app.delete('/delete', (request, response) => {
+app.delete('/delete/:id', (request, response) => {
     const id = request.params.id;
     const sql = "DELETE FROM users WHERE Id=?";
     connection.query(sql, [id], (err, result) => {
         if (err) return response.status(500).json({ error: err });
-        response.json({ message: "Record Deleted successfully...!" });
         if (result.affectedRows === 0) {
             return response.status(404).json({ message: "No record found" })
         };
-        console.log("Data deleted successfullt...!");
+        response.json({message:"Record Deleted successfully...!"})
+        console.log("Data deleted successfully...!");
     });
 });
 
 //READ
 app.get('/getAllUsers', (request, response) => {
     const sql = "SELECT * FROM users";
-    connection.query(sql, (error, result) => {
+    connection.query(sql, (err, result) => {
         if (err) return response.status(500).json({ error: err });
         response.json(result);
         console.log("Record Displayed...!");
@@ -73,7 +73,7 @@ app.get('/getAllUsers', (request, response) => {
 
 //UPDATE
 app.put('/updateRecord/:id', (request, response) => {
-    const is = request.params.id;
+    const id = request.params.id;
     const { name, contact } = request.body;
     const sql = "UPDATE users SET name=?,contact=? WHERE id=?";
 
