@@ -1,17 +1,17 @@
 const userRepo = require('../repositories/userRepository');
 
-exports.addUser = (name, contact, cb) => {
-    userRepo.insertUser(name, contact, cb);
+exports.addUser = (name, contact, result) => {
+    userRepo.insertUser(name, contact, result);
 };
 
-exports.removeUser = (id, cb) => {
-    userRepo.deleteUser(id, cb);
+exports.removeUser = (id, result) => {
+    userRepo.deleteUser(id, result);
 };
 
-exports.getAllUsers = (cb) => {
-    userRepo.getUsers(cb);
+exports.getAllUsers = (result) => {
+    userRepo.getUsers(result);
 };
 
-exports.editUser = (id, name, contact, cb) => {
-    userRepo.updateUser(id, name, contact, cb);
+exports.editUser = (id, name, contact, result) => {
+    userRepo.updateUser(id, name, contact, result);
 };
