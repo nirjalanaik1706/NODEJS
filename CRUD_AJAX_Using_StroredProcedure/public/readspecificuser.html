@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Read Specific User</title>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="./scripts/readspecificuser.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card text-center">
+    <h2>Read Specific User</h2>
+
+    <input type="number" id="userId" placeholder="Enter User ID">
+    <button id="showSpecificUser" class="btn-crud read text-center">Show User</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Contact</th>
+            </tr>
+        </thead>
+        <tbody id="userTable"></tbody>
+    </table>
+</div>
+
+</body>
+</html>

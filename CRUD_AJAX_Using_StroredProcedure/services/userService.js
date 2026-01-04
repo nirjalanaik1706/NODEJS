@@ -15,3 +15,7 @@ exports.getAllUsers = (result) => {
 exports.editUser = (id, name, contact, result) => {
     userRepo.updateUser(id, name, contact, result);
 };
+
+exports.getparticularUser=(id,result)=>{
+    userRepo.getSpecificUser(id,result);
+}

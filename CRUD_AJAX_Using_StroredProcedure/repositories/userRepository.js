@@ -38,3 +38,14 @@ exports.updateUser = (id, name, contact, result) => {
         }
     );
 };
+exports.getSpecificUser=(id,result)=>{
+    connection.query('CALL getSpecificUser(?)',
+        [id],(err,res)=>{
+            if(err){
+                result(err,null);
+            }
+            else{
+                result(null,res[0]);
+            }
+        })
+}

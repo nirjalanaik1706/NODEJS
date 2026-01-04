@@ -41,8 +41,18 @@ exports.updateUser = (req, res) => {
 
     userService.editUser(id, name, contact, (err, result) => {
         if (err) return res.status(500).json(err);
-
         res.json({ message: "Record Updated Successfully...!" });
         console.log("Record updated...");
+    });
+};
+
+exports.getSpecificUser=(req,res)=>{
+    const id=req.params.id;
+    userService.getparticularUser(id,(err,result)=>{
+         if (err) {
+            return res.status(500).json(err);
+        }
+        res.json(result[0]);
+        console.log("Specific Record Fetched...!");
     });
 };
