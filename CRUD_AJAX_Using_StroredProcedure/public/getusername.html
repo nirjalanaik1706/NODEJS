@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Read Specific User</title>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="./scripts/getUserName.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card text-center">
+    <h2>Get User Name </h2>
+
+    <input type="number" id="getname" placeholder="Enter User ID" required>
+    <button id="getusername" class="btn-crud read text-center">Show User</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Contact</th>
+            </tr>
+        </thead>
+        <tbody id="userTable"></tbody>
+    </table>
+</div>
+
+</body>
+</html>

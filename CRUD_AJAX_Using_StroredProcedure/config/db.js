@@ -4,7 +4,8 @@ var dbserver = {
     host: "localhost",
     user: "root",
     password: "password",
-    database: "customers"
+    database: "customers",
+    multipleStatements: true
 };
 
 var connection = mysql.createConnection(dbserver);

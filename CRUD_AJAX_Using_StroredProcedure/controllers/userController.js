@@ -1,3 +1,4 @@
+const connection = require('../config/db');
 const userService = require('../services/userService');
 
 
@@ -46,13 +47,24 @@ exports.updateUser = (req, res) => {
     });
 };
 
-exports.getSpecificUser=(req,res)=>{
-    const id=req.params.id;
-    userService.getparticularUser(id,(err,result)=>{
-         if (err) {
+exports.getSpecificUser = (req, res) => {
+    const id = req.params.id;
+    userService.getparticularUser(id, (err, result) => {
+        if (err) {
             return res.status(500).json(err);
         }
         res.json(result[0]);
         console.log("Specific Record Fetched...!");
+    });
+};
+
+exports.getUserNameSP = (req, res) => {
+    const id = req.params.id;
+    userService.getUserNameSP(id, (err, result) => {
+        if (err) return res.status(500).json(err);
+        if (!result) {
+            return res.status(404).json({ message: "User not found" });
+        }
+        res.json(result);
     });
 };

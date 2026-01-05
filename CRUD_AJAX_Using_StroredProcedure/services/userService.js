@@ -19,3 +19,7 @@ exports.editUser = (id, name, contact, result) => {
 exports.getparticularUser=(id,result)=>{
     userRepo.getSpecificUser(id,result);
 }
+
+exports.getUserNameSP = (id, result) => {
+    userRepo.getUserName(id, result);
+};

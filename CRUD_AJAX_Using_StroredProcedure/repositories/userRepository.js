@@ -49,3 +49,14 @@ exports.getSpecificUser=(id,result)=>{
             }
         })
 }
+
+exports.getUserName = (id, result) => {
+    connection.query(
+        'CALL getUserName(?, @userName,@userContact); SELECT @userName, @userContact;', [id],
+        (err, results) => {
+            if (err) return result(err);
+            result(null, results[1][0]);
+        }
+    );
+};
+
