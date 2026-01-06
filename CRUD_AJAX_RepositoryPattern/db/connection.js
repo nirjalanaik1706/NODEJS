@@ -1,15 +1,12 @@
 var mysql = require('mysql2');
 
-var dbserver = {
+const db=mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "password",
     database: "customers"
-};
-
-var connection = mysql.createConnection(dbserver);
-
-connection.connect(function (err) {
+});
+db.connect(function (err) {
     if (err) {
         console.log("connection unsuccessful..." + err);
     } else {
@@ -17,4 +14,4 @@ connection.connect(function (err) {
     }
 });
 
-module.exports = connection;
+module.exports = db;
