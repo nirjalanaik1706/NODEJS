@@ -15,8 +15,7 @@ $(document).ready(()=>{
             },
             error:function(err){
                 console.error(err);
-                alert("Error updating user");
-            }
+                alert("Error updating user");            }
         })
     })
 })

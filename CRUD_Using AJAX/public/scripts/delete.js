@@ -17,7 +17,6 @@ $(document).ready(()=>{
                 console.error(err);
                 alert("Error Deleting User")
             }
-            
         });
     });
 });

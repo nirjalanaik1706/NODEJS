@@ -33,6 +33,14 @@ app.get("/family",(request,response)=>{
     response.sendFile(path.join(__dirname,"/public/family.json"));
 });
 
+app.get("/customers",(request,response)=>{
+    var customers=[
+        {"id":1,"firstname":"nirjala"},
+        {"id":2,"firstname":"sahil"}
+    ];
+    response.send(customers);
+})
+
 app.listen(8888,()=>{
     console.log("server is listening on port no. 8888");
 });

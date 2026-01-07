@@ -1,25 +1,32 @@
-const userRepo = require('../repositories/userRepository');
+module.exports = function userService(userRepository) {
+    return {
 
-exports.addUser = (name, contact, result) => {
-    userRepo.insertUser(name, contact, result);
-};
+        addUser: (name, contact, result) => {
+            userRepository.insertUser(name, contact, result);
+        },
 
-exports.removeUser = (id, result) => {
-    userRepo.deleteUser(id, result);
-};
+        removeUser: (id, result) => {
+            userRepository.deleteUser(id, result);
+        },
 
-exports.getAllUsers = (result) => {
-    userRepo.getUsers(result);
-};
+        getAllUsers: (result) => {
+            userRepository.getUsers(result);
+        },
 
-exports.editUser = (id, name, contact, result) => {
-    userRepo.updateUser(id, name, contact, result);
-};
+        editUser: (id, name, contact, result) => {
+            userRepository.updateUser(id, name, contact, result);
+        },
 
-exports.getparticularUser=(id,result)=>{
-    userRepo.getSpecificUser(id,result);
+        getparticularUser: (id, result) => {
+            userRepository.getSpecificUser(id, result);
+        },
+
+        getUserNameSP: (id, result) => {
+            userRepository.getUserName(id, result);
+        },
+
+        UpdateUserDetailsSimpleSP:(id,newName,newContact,result)=>{
+            userRepository.UpdateUserDetails(id,newName,newContact,result);
+        }
+    }
 }
-
-exports.getUserNameSP = (id, result) => {
-    userRepo.getUserName(id, result);
-};
