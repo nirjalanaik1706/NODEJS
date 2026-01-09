@@ -10,6 +10,8 @@ function statement_semicolumn() {
     console.log(heroName, heroLevel, heroHealth)
 }
 statement_semicolumn();
+console.log("                                 ");
+console.log("                                 ");
 
 // Create a variable mana using let and reduce its value inside a loop.
 // Create a const for MAX_HEALTH and try to change it. Observe the error.
@@ -26,6 +28,9 @@ function mana() {
     }
 }
 mana();
+console.log("                                 ");
+console.log("                                 ");
+
 
 // Declare 5 variables—each of a different type.
 // Print each variable and its type using typeof.
@@ -44,6 +49,9 @@ function diff_data_types() {
     console.log(typeof (value));
 }
 diff_data_types();
+console.log("                                 ");
+console.log("                                 ");
+
 
 // Use arithmetic operators to calculate total damage from 3 attacks.
 // Use logical operators to determine if a hero can cast a spell (enough mana AND alive).
@@ -82,7 +90,8 @@ function attacks() {
     }
 }
 attacks();
-
+console.log("                                 ");
+console.log("                                 ");
 
 // Write a function castSpell(spellName) that logs "Casting spellName".
 // Rewrite it using an arrow function.
@@ -101,6 +110,10 @@ let cast = (spellName) => {
 cast("nirjala");
 cast("Sahil");
 cast("Niruuuuuu");
+
+console.log("                                 ");
+console.log("                                 ");
+
 
 // Write an if-else to check hero health and log "Alive" or "Defeated".
 // Use a for loop to simulate 5 rounds of attack.
@@ -152,6 +165,9 @@ function health() {
 
 // Call the function
 health();
+console.log("                                 ");
+console.log("                                 ");
+
 
 
 // Create an object weapon with name, damage, type.
@@ -165,6 +181,10 @@ function array_loop() {
         console.log(item);
     }
 }
+console.log("                                 ");
+console.log("                                 ");
+
+
 
 // Convert 3 traditional functions to arrow functions.
 // Use an arrow function inside map() to double each number in an array:
@@ -174,11 +194,11 @@ function add(a, b) {
     return a + b;
 }
 // Arrow function
-const add = (a, b) => a + b;
-console.log(add(3, 4));
+// const add = (a, b) => a + b;
+// console.log(add(3, 4));
 
-let nums = [1, 2, 3];
-let doubled = nums.map(n => n * 2);
+// let nums = [1, 2, 3];
+// let doubled = nums.map(n => n * 2);
 
 function show() {
     // Array
@@ -193,6 +213,9 @@ function show() {
 }
 show();
 
+console.log("                                 ");
+console.log("                                 ");
+
 
 // Merge two arrays of treasure items using the spread operator.
 // Clone an object and add a new property.
@@ -206,6 +229,10 @@ function spread() {
     let obj2 = { ...obj1, z: 3 }; // {x:1, y:2, z:3}
 }
 spread();
+
+console.log("                                 ");
+console.log("                                 ");
+
 
 // Use map to increase each hero level by 1.
 // Use filter to select only high-level heroes (level > 3).
@@ -222,3 +249,4 @@ function array_method() {
     // reduce
     let sum = numbers.reduce((acc, n) => acc + n, 0); // 15
 }
+console.log("                                 ");
