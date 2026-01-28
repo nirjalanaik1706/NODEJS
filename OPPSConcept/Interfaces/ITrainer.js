@@ -1,5 +1,5 @@
 class ITrainer{
-    conductTrainning(){
+    conductTraining(){
         throw new Error("Trainning Loading");
     }
 
@@ -7,3 +7,4 @@ class ITrainer{
         throw new Error("Session loading");
     }
 }
+export default ITrainer;

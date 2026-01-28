@@ -3,3 +3,4 @@ class IApprisable{
         throw new Error("Conduct Apprisable");
     }
 }
+export default IApprisable;

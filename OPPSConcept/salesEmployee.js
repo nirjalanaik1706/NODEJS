@@ -14,5 +14,12 @@ class salesEmployee extends employee{
     doWork(){
         console.log("This is a do work");
     }
+    conductTraining(){
+        console.log("Trainer hands-on a trainning");
+    }
+
+    conductSession(){
+        console.log("Trainer hands-on a session");
+    }
 }
 export default salesEmployee;
