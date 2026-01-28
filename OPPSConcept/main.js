@@ -36,11 +36,10 @@ Object.assign(salesEmployee.prototype,IApprisable.prototype);
 Object.assign(salesEmployee.prototype,ITrainer.prototype);
 
 const staff=[
-        new salesEmployee(1, "Nirjala", 25000, 5000),
-        new salesManager(2, "Sahil", 40000, 8000, 10000)
+        new salesEmployee(1, "Nirjala", 25000, 5000,2000,500),
+        new salesManager(2, "Sahil", 40000, 8000, 10000,7000,6000)
 ];
 for (const trainer of staff){
     console.log(`Id :${trainer.id},Name : ${trainer.name},Pay :${trainer.computePay()}`);
     trainer.conductTraining();
-
 }
