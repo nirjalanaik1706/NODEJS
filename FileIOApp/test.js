@@ -1,8 +1,9 @@
 
 var fs=require('fs');
-var fileName="./data/result.txt";
+var fileName="./data/result.txt";// data files 
 
 //callback function
+
 var onFileRead=function(err,data){
 
     if(err){
