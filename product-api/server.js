@@ -41,8 +41,8 @@ app.put("/products/:id", (req, res) => {
     const id = req.params.id;
     const { title, description, imageurl, unitprice, likes } = req.body;
 
-    const sql = `UPDATE products 
-                SET title=?, description=?, imageurl=?, unitprice=?, likes=? 
+    const sql = `UPDATE products
+                SET title=?, description=?, imageurl=?, unitprice=?, likes=?
                 WHERE id=?`;
 
     db.query(sql, [title, description, imageurl, unitprice, likes, id],
