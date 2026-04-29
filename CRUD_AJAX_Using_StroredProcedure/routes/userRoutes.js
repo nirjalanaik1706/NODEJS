@@ -14,7 +14,7 @@ const userService = require('../services/userService')(userRepository);
 const userController = require('../controllers/userController')(userService);
 
 
-
+// methods to handle routes and call the appropriate controller functions
 router.post('/users', userController.addUser);
 router.delete('/delete/:id', userController.deleteUser);
 router.get('/getAllUsers', userController.getUsers);
@@ -22,6 +22,7 @@ router.put('/updateRecord/:id', userController.updateUser);
 router.get('/getSpecificUser/:id',userController.getSpecificUser);
 router.get('/getUserNameSP/:id',userController.getUserNameSP);
 router.put('/UpdateUserDetails/:id',userController.UpdateUserDetailsSimple);
+
 
 
 
