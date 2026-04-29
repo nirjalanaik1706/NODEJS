@@ -12,8 +12,11 @@ var people = [
     { 'Firstname': 'sahil', 'Lastname': 'kamble', 'Email': 'nirjalanaik17062gmail.com', 'ContactNumber': '7972520102' },
     { 'Firstname': 'Niru', 'Lastname': 'Naik', 'Email': 'nirjalanaik17062gmail.com', 'ContactNumber': '7972520102' },
     { 'Firstname': 'Anuja', 'Lastname': 'Naik', 'Email': 'nirjalanaik17062gmail.com', 'ContactNumber': '7972520102' },
+    { 'Firstname': 'anu', 'Lastname': 'Naik', 'Email': 'nirjalanaik17062gmail.com', 'ContactNumber': '7972520102' },
+    
+    { 'Firstname': 'Niru', 'Lastname': 'Naik', 'Email': 'nirjalanaik17062gmail.com', 'ContactNumber': '7972520102' },
+    { 'Firstname': 'Anuja', 'Lastname': 'Naik', 'Email': 'nirjalanaik17062gmail.com', 'ContactNumber': '7972520102' },
     { 'Firstname': 'anu', 'Lastname': 'Naik', 'Email': 'nirjalanaik17062gmail.com', 'ContactNumber': '7972520102' }
-
 ]
 
 var data = "Transflower Learning Pvt.Ltd"
