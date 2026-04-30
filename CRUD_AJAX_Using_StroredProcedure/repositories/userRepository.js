@@ -67,8 +67,22 @@ module.exports = function userRepository(db) {
             db.query(sql, [id, newName, newContact], (err, results) => {
                 if (err) return result(err);
                 result(null, results[1][0]);
+
             });
+            
         }
+
+        //      deleteUser: (id, result) => {
+        //         db.query('CALL deleteUser(?)',
+        //             [id], result
+        //         );
+        //         if (err) {
+        //             result(err, null);
+        //         }
+        //         else {
+        //             result(null, res);
+        //         }
+        //  }
     }
 }
 
